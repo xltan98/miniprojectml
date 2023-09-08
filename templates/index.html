@@ -1,0 +1,155 @@
+<html>
+    <body>
+        <style type="text/css">
+            body {
+                background-image: url("https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&dl=hu-chen-__cBlRzLSTg-unsplash.jpg&q=80&fm=jpg&crop=entropy&cs=tinysrgb");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                text-align: center;
+                color: #fffaf1;
+                text-shadow: 2px 2px 6px black;
+                }
+
+            .container {
+                background: rgba(47, 44, 44, 0.514);
+                border: 2px solid #fffaf19f;
+                border-radius: 10px;
+                box-shadow:rgba(47, 44, 44, 0.794);
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 95%;
+                min-width: 500px;
+                padding: 30px;
+                position: relative;
+                width: max-content;
+                text-align: center;
+                color: #fffaf1;
+                font-family: Calibri;
+                }
+
+            .select-search {
+                box-sizing: border-box;
+                display: block;
+                justify-content: center;
+                margin-left: auto;
+                margin-right: auto;
+                min-width: 100%;
+                position: relative;
+            }
+
+        </style>
+        <br>
+        <h1>HDB Valuation</h1>
+        <style type="text/css">
+            h1 {
+                text-align: center;
+                color: #fffaf1;
+                font-family:'Calibri';
+                font-style: 'strong';
+            }
+        </style>
+        <h3>Simply enter the numbers and this app will instantly value your HDB property!</h3>
+        <style type="text/css">
+            h3 {
+                text-align:center;
+                color: #fffaf1;
+                font-family:'Calibri';
+                font-style: 'strong';
+            }
+        </style>
+        <br>
+
+            <div class="container">
+                <form action="/" method="POST">
+                        
+                         <div style="margin-bottom: 20px;">
+                        <span class="input-title">Year</span> 
+                        <div class="select-search">
+                            <div class="select-search__value">
+                                <input tabindex="0" placeholder="Year" type = "number" name="Year" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <span class="input-title">Town Code</span> 
+                        <div class="select-search">
+                            <div class="select-search__value">
+                                <input tabindex="0" placeholder="Town" type = "number" step="1" name="town_code" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <span class="input-title">Flat type</span> 
+                        <div class="select-search">
+                            <div class="select-search__value">
+                                <input tabindex="0" placeholder="Flat type" type = "number" step="1" name="flat_type_code" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <span class="input-title">Storey range</span> 
+                        <div class="select-search">
+                            <div class="select-search__value">
+                                <input tabindex="0" placeholder="storey range" type = "number" step="1" name="storey_range_code" value>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <span class="input-title">Floor Area (sqm)</span> 
+                        <div class="select-search">
+                            <div class="select-search__value">
+                                <input tabindex="0" placeholder="Floor sqm (sqm)" type = "number" name="floor_area_sqm" value>
+                            </div>
+                        </div>
+                    </div>
+                
+
+                    <div style="margin-bottom: 20px;">
+                        <span class="input-title">Flat Model</span> 
+                        <div class="select-search">
+                            <div class="select-search__value">
+                                <input tabindex="0" placeholder="Flat Model" type = "number"  name="flat_model_code" >
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div style="margin-bottom: 20px;">
+                        <span class="input-title">Remaining lease</span> 
+                        <div class="select-search">
+                            <div class="select-search__value">
+                                <input tabindex="0" placeholder="Remaining Lease" type = "number" step = "1" name="remaining_lease_year" >
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <p><input type = "submit" value = "Enter"></p>
+                    <style type="text/css">
+                        p {
+                            text-align: center;
+                            color: #fffaf1;
+                            font-family: Calibri;
+                        }
+                    </style>
+                </form>
+        
+                <p>Your property is valued at {{results}}</p>
+                <style type="text/css">
+                    p {
+                        text-align: center;
+                        color: #fffaf1;
+                        font-family: Calibri;
+                    }
+                </style>
+
+            </div>
+    </body>
+</html>
